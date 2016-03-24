@@ -7,5 +7,19 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shura16/contatosjs.git"
+  },
+  "author": "João Antônio Cabral",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shura16/contatosjs/issues"
+  },
+  "homepage": "https://github.com/Shura16/contatosjs#readme"
 }
