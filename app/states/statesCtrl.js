@@ -24,8 +24,18 @@ angular.module("statesModule")
 		controller: "StatesCtrl"
 	})
 	
+	.when("/states/edit/:id", {
+		templateUrl: "states/edit.html",
+		controller: "StatesCtrl"
+	})
+	
+	.when("/states/new", {
+		templateUrl: "states/new.html",
+		controller: "StatesCtrl"
+	})
+	
 	.otherwise({
-		redirectTo: "/"
+		redirectTo: "/states"
 	});
 });
 

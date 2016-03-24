@@ -17,9 +17,22 @@
 				<td>{{ state.name }}</td>
 				<td>{{ state.initials }}</td>
 				<td>
-					<a class="w3-btn" href="/#states/{{ state.id }}">Detalhes</a>
+					<a class="w3-btn w3-blue w3-large" href="/#states/{{ state.id }}">
+						<i class="fa fa-search"></i>
+					</a>
+					<a class="w3-btn w3-orange w3-large" href="/#states/edit/{{ state.id }}">
+						<i class="fa fa-pencil"></i>
+					</a>
+					<a class="w3-btn w3-red w3-large" href="/#states/delete/{{ state.id }}">
+						<i class="fa fa-trash-o"></i>
+					</a>
 				</td>
 			</tr>
 		</tbody>
 	</table>
+	<p>
+		<a class="w3-btn w3-theme w3-large" href="/#states/new">
+			<i class="fa fa-file-o"></i> Novo
+		</a>
+	</p>
 </div>
