@@ -1,0 +1,11 @@
+{
+  "name": "contatosjs",
+  "description": "Aplicação de Contatos em AngularJS",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "3.4.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

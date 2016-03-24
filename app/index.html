@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="contatosJS">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="UTF-8" />
+		<title>Contatos Web</title>
+		
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/w3.css" />
+		<link rel="stylesheet" href="css/w3-theme-green.css" />
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+		
+		<script src="js/app.js" charset="UTF-8"></script>
+		<script src="js/navCtrl.js" charset="UTF-8"></script>
+		<script src="js/homeCtrl.js" charset="UTF-8"></script>
+		<script src="js/aboutCtrl.js" charset="UTF-8"></script>
+		
+		<script src="states/statesCtrl.js" charset="UTF-8"></script>
+		<script src="states/statesService.js" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div ng-include="'pages/nav.html'"></div>
+		<div class="main">
+			<ng-view></ng-view>
+		</div><!-- main -->
+		
+	</body>
+</html>
