@@ -12,6 +12,12 @@ angular.module("statesModule")
 		},
 		"getById": function(id) {
 			return $http.get(config.baseUrl + "/states/" + id);
+		},
+		"save": function(state) {
+			return $http.post(config.baseUrl + "/states/new", state);
+		},
+		"deleteById": function(id){
+			return $http.delete(config.baseUrl + "/states/delete/" + id);
 		}
 	};
 	
