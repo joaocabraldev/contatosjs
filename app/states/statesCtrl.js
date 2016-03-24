@@ -5,17 +5,17 @@ angular.module("statesModule", ["ngRoute"]);
 
 angular.module("statesModule")
 
-.config(function($routeProvider, $locationProvider) {
-	
-	$locationProvider.html5Mode({
-	  enabled: true,
-	  requireBase: false
-	});
+.config(function($routeProvider) {
 	
 	$routeProvider
 	
 	.when("/states", {
 		templateUrl: "states/list.html",
+		controller: "StatesCtrl"
+	})
+	
+	.when("/states/new", {
+		templateUrl: "states/new.html",
 		controller: "StatesCtrl"
 	})
 	
@@ -27,15 +27,6 @@ angular.module("statesModule")
 	.when("/states/edit/:id", {
 		templateUrl: "states/edit.html",
 		controller: "StatesCtrl"
-	})
-	
-	.when("/states/new", {
-		templateUrl: "states/new.html",
-		controller: "StatesCtrl"
-	})
-	
-	.otherwise({
-		redirectTo: "/states"
 	});
 });
 
