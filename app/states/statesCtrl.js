@@ -40,10 +40,10 @@ angular.module("statesModule")
 		States.getAll()
 		.then(
 			function(response) {
-				$scope.states = response.data;
+				$scope.states = response.data._embedded.states;
 			},
 			function(errResponse) {
-				alert("Erro ao buscar estados." + errResponse);
+				console.error("Erro ao buscar estados.");
 			}
 		);
 	};
@@ -57,30 +57,28 @@ angular.module("statesModule")
 					$scope.state = response.data;
 				},
 				function(errResponse) {
-					alert("Erro ao buscar estado." + errResponse.data);
+					console.error("Erro ao buscar estado.");
 				}
 			);
 		}
 	};
 	
 	$scope.save = function(state) {
-		alert("O estado a ser salvo é: " + state.name);
-		alert("A sigla a ser salva é: " + state.initials);
+		/*
 		var myState = {
 			id: null,
 			name: state.name,
 			initials: state.initials
 		};
-		alert(myState);
-		States.save(myState).then(
+		*/
+		States.save(state).then(
 			function(response) {
 				delete $scope.state;
-				alert("Estado Salvo com Sucesso!");
+				console.info("Estado Salvo com Sucesso!");
 				$location.path("/states");
 			},
-			function(errorResponse){
-				alert("O Estado é: " + state);
-				alert("Erro ao salvar estado." + errorResponse.data.error);
+			function(response){
+				console.error("Erro ao salvar Estado.");
 			}
 		);
 	};

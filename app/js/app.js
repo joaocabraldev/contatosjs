@@ -26,5 +26,5 @@ angular.module("contatosJS")
 angular.module("contatosJS")
 
 .value("config", {
-	baseUrl: "https://contatosweb.herokuapp.com/rest" 
+	baseUrl: "https://contatosweb.herokuapp.com" 
 });
