@@ -17,7 +17,7 @@ angular.module("statesModule")
 			return $http.post(config.baseUrl + "/states", state);
 		},
 		"update": function(state) {
-			return $http.put(config.baseUrl + "/states", state);
+			return $http.post(config.baseUrl + "/states", state);
 		},
 		"deleteById": function(id){
 			return $http.delete(config.baseUrl + "/states/" + id);
