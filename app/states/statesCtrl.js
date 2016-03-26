@@ -35,6 +35,7 @@ angular.module("statesModule")
 .controller("StatesCtrl", ["$scope", "$location", "$routeParams", "States", function($scope, $location, $routeParams, States){
 	$scope.state = [];
 	$scope.states = [];
+	$scope.loading = true;
 	
 	var getAll = function() {
 		States.getAll()
@@ -45,7 +46,10 @@ angular.module("statesModule")
 			function(errResponse) {
 				console.error("Erro ao buscar estados.");
 			}
-		);
+		)
+		.finally(function(response) {
+			$scope.loading = false;
+		});
 	};
 	
 	var getState = function() {
