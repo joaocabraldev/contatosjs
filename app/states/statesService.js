@@ -1,27 +1,38 @@
-/*globals angular */
+/* globals angular */
 
-/*eslint-env browser */
-
-angular.module("statesModule")
-
-.factory("States", ["$http", "config", function($http, config) {
-
-	return {
-		"getAll": function() {
+(function() {
+	angular
+	.module("contatosJS")
+	.factory("States", states);
+	
+	states.$inject = ["$http", "config"];
+	function states($http, config){
+		var service = {};
+		service.getAll = getAll;
+		service.getById = getById;
+		service.save = save;
+		service.update = update;
+		service.deleteById = deleteById;
+		return service;
+		
+		function getAll() {
 			return $http.get(config.baseUrl + "/states");
-		},
-		"getById": function(id) {
+		}
+		
+		function getById(id) {
 			return $http.get(config.baseUrl + "/states/" + id);
-		},
-		"save": function(state) {
+		}
+		
+		function save(state) {
 			return $http.post(config.baseUrl + "/states", state);
-		},
-		"update": function(state) {
+		}
+		
+		function update(state) {
 			return $http.post(config.baseUrl + "/states", state);
-		},
-		"deleteById": function(id){
+		}
+		
+		function deleteById(id) {
 			return $http.delete(config.baseUrl + "/states/" + id);
 		}
-	};
-	
-}]);
+	}
+})();
