@@ -8,7 +8,7 @@
 	<li ng-class="{'w3-theme-d4': isActive('/about')}" >
 		<a href="/#about">Sobre</a>
 	</li>
-	<li class="w3-right">
-		<a href="/#/" ng-click="logout()">Usuário: {{ globals.currentUser.username }}</a>
+	<li class="w3-right" ng-if="globals.loggedIn">
+		<a href="#/logout">Usuário: {{ globals.currentUser.username }}</a>
 	</li>
 </ul>

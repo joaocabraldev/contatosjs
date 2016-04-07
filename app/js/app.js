@@ -27,6 +27,11 @@
 			controller: "LoginCtrl"
 		})
 		
+		.when("/logout", {
+			templateUrl: "login/login.html",
+			controller: "LoginCtrl"
+		})
+		
 		.when("/states", {
 			templateUrl: "states/list.html",
 			controller: "StatesCtrl"

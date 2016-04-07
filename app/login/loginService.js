@@ -112,7 +112,8 @@
                 currentUser: {
                     username: username,
                     authdata: authdata
-                }
+                },
+                loggedIn: true
             };
  
             $http.defaults.headers.common["Authorization"] = "Basic " + authdata;
