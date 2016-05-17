@@ -4,12 +4,17 @@
 	"use strict";
 	
 	angular
-	.module("contatosJS", ["ngRoute" , "ngCookies"])
-		
-	.value("config", {
-		baseUrl: "https://contatosweb.herokuapp.com/rest"
-	})
+	.module("contatosJS", [
+		"ngRoute"
+		, "ngCookies"
+		, "contatosJS.controllers"
+		, "contatosJS.services"
+		, "contatosJS.states"
+		, "contatosJS.cities"
+	]);
 	
+	angular
+	.module("contatosJS")
 	.config(config)
 	.run(run);
 	
@@ -18,7 +23,7 @@
 		$routeProvider
 	
 		.when("/", {
-			templateUrl: "pages/home.html",
+			templateUrl: "views/home.html",
 			controller: "HomeCtrl"
 		})
 		
@@ -32,28 +37,8 @@
 			controller: "LoginCtrl"
 		})
 		
-		.when("/states", {
-			templateUrl: "states/list.html",
-			controller: "StatesCtrl"
-		})
-		
-		.when("/states/new", {
-			templateUrl: "states/new.html",
-			controller: "StatesCtrl"
-		})
-		
-		.when("/states/:id", {
-			templateUrl: "states/details.html",
-			controller: "StatesCtrl"
-		})
-		
-		.when("/states/edit/:id", {
-			templateUrl: "states/edit.html",
-			controller: "StatesCtrl"
-		})
-		
 		.when("/about", {
-			templateUrl: "pages/about.html",
+			templateUrl: "views/about.html",
 			controller: "AboutCtrl"
 		})
 		

@@ -9,39 +9,43 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 		
 		<link rel="stylesheet" href="css/style.css" />
-		<link rel="stylesheet" href="css/w3.css" />
-		<link rel="stylesheet" href="css/w3-theme-green.css" />
+		<link rel="stylesheet" href="lib/w3css/w3.css" />
+		<link rel="stylesheet" href="lib/w3css/w3-theme-green.css" />
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 		
-		<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
-		<script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
-		<script src="https://code.angularjs.org/1.5.0/angular-cookies.min.js"></script>
+		<script src="lib/jquery/jquery-2.2.3.min.js" charset="UTF-8"></script>
+		
+		<script src="lib/angular/angular.js"></script>
+		<script src="lib/angular/angular-route.min.js"></script>
+		<script src="lib/angular/angular-cookies.min.js"></script>
 		
 		<!-- Auth0 -->
-		<script src="https://cdn.auth0.com/js/lock-9.0.min.js"></script>
-		<script type="text/javascript" src="https://cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
-		<script type="text/javascript" src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
-		<script src="https://cdn.auth0.com/w2/auth0-angular-4.js"></script>
+		<script src="lib/auth0/lock-9.0.js"></script>
+		<script src="lib/auth0/angular-storage.js"></script>
+		<script src="lib/auth0/angular-jwt.js"></script>
+		<script src="lib/auth0/auth0-angular-4.js"></script>
 		
 		<script src="js/app.js" charset="UTF-8"></script>
-		<script src="js/navCtrl.js" charset="UTF-8"></script>
-		<script src="js/homeCtrl.js" charset="UTF-8"></script>
-		<script src="js/aboutCtrl.js" charset="UTF-8"></script>
+		<script src="js/controllers.js" charset="UTF-8"></script>
+		<script src="js/services.js" charset="UTF-8"></script>
 		
 		<script src="login/loginCtrl.js" charset="UTF-8"></script>
-		<script src="login/logoutCtrl.js" charset="UTF-8"></script>
 		<script src="login/loginService.js" charset="UTF-8"></script>
 		
 		<script src="user/usersCtrl.js" charset="UTF-8"></script>
 		<script src="user/usersService.js" charset="UTF-8"></script>
 		
-		<script src="states/statesCtrl.js" charset="UTF-8"></script>
-		<script src="states/statesService.js" charset="UTF-8"></script>
+		<script src="modules/states/module.js" charset="UTF-8"></script>
+		<script src="modules/states/js/controllers.js" charset="UTF-8"></script>
+		<script src="modules/states/js/services.js" charset="UTF-8"></script>
+		
+		<script src="modules/states/module.js" charset="UTF-8"></script>
+		<script src="modules/states/js/controllers.js" charset="UTF-8"></script>
+		<script src="modules/states/js/services.js" charset="UTF-8"></script>
 	</head>
 	<body>
-		<div ng-include="'pages/nav.html'"></div>
+		<div ng-include="'views/nav.html'"></div>
 		<div class="main">
 			<ng-view></ng-view>
 		</div><!-- main -->
