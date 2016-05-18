@@ -5,12 +5,9 @@ module.exports = function( grunt ) {
        copy: {
           main: {
             files: [
-              {expand: false, src: ['app/**'], dest: 'dist/'}
+              {expand: true, src: ['app/**'], dest: 'dist/'}
             ]
           },
-        },
-        useminPrepare: {
-          html: 'index.html'
         },
         concat: {
             options: {
@@ -53,9 +50,13 @@ module.exports = function( grunt ) {
                 files: { 'dist/app/js/all.min.js': ['dist/app/js/all.js'] }
             }
         },
-        usemin: {
-            html: 'index.html'
-        }
+        processhtml: {
+            dist: {
+              files: {
+                'dist/app/index.html': ['dist/app/index.html']
+              }
+            }
+          }
     });
   
     // Plugins do Grunt
@@ -64,11 +65,10 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-usemin');
+    grunt.loadNpmTasks('grunt-processhtml');
 
     grunt.registerTask('default', [
-        'clean', 'copy', 'useminPrepare'
-        , 'concat', 'cssmin', 'uglify'
-        , 'usemin'
+        'clean', 'copy', 'concat'
+        , 'cssmin', 'uglify', 'processhtml'
     ]);
 };
