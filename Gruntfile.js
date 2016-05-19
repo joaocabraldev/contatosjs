@@ -1,7 +1,31 @@
 module.exports = function( grunt ) {
  
     grunt.initConfig({
-       clean :  ['dist/**'],
+        clean :  {
+            main: ['dist/**'],
+            dist: [
+                'dist/app/css/style.css'
+                , 'dist/app/css/all.css'
+                , 'dist/app/js/all.js'
+                , 'dist/app/js/app.js'
+                , 'dist/app/js/controllers.js'
+                , 'dist/app/js/services.js'
+                , 'dist/app/js/services.js'
+                //, 'dist/app/lib/**'
+                , 'dist/app/modules/cities/css/**'
+                , 'dist/app/modules/cities/js/**'
+                , 'dist/app/modules/cities/*.js'
+                , 'dist/app/modules/login/css/**'
+                , 'dist/app/modules/login/js/**'
+                , 'dist/app/modules/login/*.js'
+                , 'dist/app/modules/states/css/**'
+                , 'dist/app/modules/states/js/**'
+                , 'dist/app/modules/states/*.js'
+                , 'dist/app/modules/users/css/**'
+                , 'dist/app/modules/users/js/**'
+                , 'dist/app/modules/users/*.js'
+            ]
+       },
        copy: {
           main: {
             files: [
@@ -22,20 +46,20 @@ module.exports = function( grunt ) {
             },
             js: {
                 src: [
-                  'dist/app/js/*.js'
-                  , 'dist/app/modules/login/*.js'
-                  , 'dist/app/modules/login/js/*.js'
-                  , 'dist/app/modules/users/*.js'
-                  , 'dist/app/modules/users/js/*.js'
-                  , 'dist/app/modules/states/*.js'
-                  , 'dist/app/modules/states/js/*.js'
-                  , 'dist/app/modules/cities/*.js'
-                  , 'dist/app/modules/cities/js/*.js'
-                  , 'dist/app/lib/jquery/jquery-2.2.3.js'
-                  , 'dist/app/lib/angular/angular.js'
-                  , 'dist/app/lib/angular/angular-route.js'
-                  , 'dist/app/lib/angular/angular-cookies.js'
-                  , 'dist/app/lib/auth0/*.js'
+                    //'dist/app/lib/jquery/jquery-2.2.3.js'
+                    //, 'dist/app/lib/angular/angular.js'
+                    //, 'dist/app/lib/angular/angular-route.js'
+                    //, 'dist/app/lib/angular/angular-cookies.js'
+                    //'dist/app/lib/auth0/*.js'
+                    'dist/app/js/*.js'
+                    , 'dist/app/modules/login/*.js'
+                    , 'dist/app/modules/login/js/*.js'
+                    , 'dist/app/modules/users/*.js'
+                    , 'dist/app/modules/users/js/*.js'
+                    , 'dist/app/modules/states/*.js'
+                    , 'dist/app/modules/states/js/*.js'
+                    , 'dist/app/modules/cities/*.js'
+                    , 'dist/app/modules/cities/js/*.js'
                 ],
                 dest: 'dist/app/js/all.js'
             }
@@ -68,7 +92,8 @@ module.exports = function( grunt ) {
     grunt.loadNpmTasks('grunt-processhtml');
 
     grunt.registerTask('default', [
-        'clean', 'copy', 'concat'
+        'clean:main', 'copy', 'concat'
         , 'cssmin', 'uglify', 'processhtml'
+        , 'clean:dist'
     ]);
 };
