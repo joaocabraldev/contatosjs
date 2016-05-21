@@ -4,13 +4,13 @@
 	angular
 	.module("contatosJS.cities")
 	.controller("CitiesCtrl", citiesCtrl);
-	
+
 	citiesCtrl.$inject = ["$scope", "$location", "$routeParams", "Cities"];
 	function citiesCtrl($scope, $location, $routeParams, Cities) {
 		$scope.city = [];
 		$scope.cities = [];
 		$scope.loading = true;
-		
+
 		var getAll = function() {
 			Cities.getAll()
 			.then(
@@ -24,28 +24,24 @@
 			.finally(function(response) {
 				$scope.loading = false;
 			});
-			
+
 		};
-		
+
 		var getCity = function() {
 			var id = $routeParams.id;
 			if (id !== undefined) {
-			    $scope.city = $scope.cities[id];
-			    
-			    /*
-				Cities.getById(id)
+		  	Cities.getById(id)
 				.then(
 					function(response) {
-						$scope.cities = response.data;
+						$scope.city = response.data;
 					},
 					function(errResponse) {
 						console.error("Erro ao buscar cidade.");
 					}
-				);
-				*/
+				)
 			}
 		};
-		
+
 		$scope.save = function(city) {
 			var myCity = {
 				id: null,
@@ -65,7 +61,7 @@
 				}
 			);
 		};
-		
+
 		$scope.update = function(city) {
 			var myCity = {
 				id: city.id,
@@ -85,7 +81,7 @@
 				}
 			);
 		};
-		
+
 		$scope.delete = function(id) {
 			Cities.deleteById(id).then(
 				function(respose) {
@@ -97,7 +93,7 @@
 				}
 			);
 		};
-		
+
 		(function init() {
 			getAll();
 			getCity();
