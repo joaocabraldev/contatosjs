@@ -1,18 +1,18 @@
 <div class="w3-card-4">
 
     <div class="w3-container w3-green">
-      <h2>Editando o Estado {{ state.name }}</h2>
+      <h2>Editando a Cidade {{ city.name }}</h2>
     </div>
-    
-    <div ng-include="'modules/states/views/form.html'"></div>
-    
+
+    <div ng-include="'modules/cities/views/form.html'"></div>
+
     <p>
-        <a class="w3-btn w3-large w3-theme" ng-click="update(state)">
+        <a class="w3-btn w3-large w3-theme" ng-click="update(city)">
             <i class="fa fa-floppy-o"></i> Salvar
         </a>
-        <a class="w3-btn w3-large w3-red" href="/#states">
+        <a class="w3-btn w3-large w3-red" href="/#cities">
            <i class="fa fa-times"></i> Cancelar
-        </a>    
+        </a>
     </p>
     <br />
 </div>

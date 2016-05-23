@@ -1,9 +1,20 @@
 <form class="w3-container">
-    
+
     <label class="w3-label">Nome</label>
-    <input class="w3-input" type="text" ng-model="state.name" />
-    
-    <label class="w3-label">Sigla</label>
-    <input class="w3-input" type="text" ng-model="state.initials" />
+    <input class="w3-input" type="text" ng-model="city.name" />
+
+    <input class="w3-check" type="checkbox" ng-model="city.capital"
+      ng-checked="city.capital" />
+    <label class="w3-label">Capital</label>
+
+    <br /><br />
+
+    <label class="w3-label">Estado</label>
+    <select class="w3-select" name="cmbEstados">
+      <option value="" disabled selected>Selecione um estado...</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+    </select>
 
 </form>

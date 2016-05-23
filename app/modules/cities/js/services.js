@@ -34,5 +34,6 @@
 		function deleteById(id) {
 			return $http.delete(config.baseUrl + "/cities/" + id);
 		}
+
 	}
 })();

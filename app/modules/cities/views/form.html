@@ -1,9 +1,17 @@
 <form class="w3-container">
-    
-    <label class="w3-label">Nome</label>
-    <input class="w3-input" type="text" ng-model="state.name" />
-    
-    <label class="w3-label">Sigla</label>
-    <input class="w3-input" type="text" ng-model="state.initials" />
 
+    <label class="w3-label">Nome</label>
+    <input class="w3-input" type="text" ng-model="city.name" />
+
+    <input class="w3-check" type="checkbox" ng-model="city.capital"
+      ng-checked="city.capital" />
+    <label class="w3-label">Capital</label>
+
+    <br /><br />
+
+    <select class="w3-select" ng-model="city.state"
+      ng-options="state as state.name + ' - ' + state.initials for state in states">
+      <option value="" disabled selected>Selecione um estado...</option>
+    </select>
+    
 </form>

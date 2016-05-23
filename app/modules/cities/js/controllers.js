@@ -5,8 +5,8 @@
 	.module("contatosJS.cities")
 	.controller("CitiesCtrl", citiesCtrl);
 
-	citiesCtrl.$inject = ["$scope", "$location", "$routeParams", "Cities"];
-	function citiesCtrl($scope, $location, $routeParams, Cities) {
+	citiesCtrl.$inject = ["$scope", "$location", "$routeParams", "Cities", "States"];
+	function citiesCtrl($scope, $location, $routeParams, Cities, States) {
 		$scope.city = [];
 		$scope.cities = [];
 		$scope.loading = true;
@@ -27,6 +27,18 @@
 
 		};
 
+		var getAllStates = function() {
+			States.getAll()
+			.then(
+				function(response) {
+					$scope.states = response.data._embedded.states;
+				},
+				function(errResponse) {
+					console.error("Erro ao buscar estados.");
+				}
+			)
+		};
+
 		var getCity = function() {
 			var id = $routeParams.id;
 			if (id !== undefined) {
@@ -43,6 +55,7 @@
 		};
 
 		$scope.save = function(city) {
+			console.info("salvando cidade...");
 			var myCity = {
 				id: null,
 				name: city.name,
@@ -97,6 +110,7 @@
 		(function init() {
 			getAll();
 			getCity();
+			getAllStates();
 		})();
 	}
 })();
