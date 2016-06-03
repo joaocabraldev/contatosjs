@@ -9,12 +9,9 @@
 
     <br /><br />
 
-    <label class="w3-label">Estado</label>
-    <select class="w3-select" name="cmbEstados">
+    <select class="w3-select" ng-model="city.state"
+      ng-options="state as state.name + ' - ' + state.initials for state in states">
       <option value="" disabled selected>Selecione um estado...</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
     </select>
-
+    
 </form>

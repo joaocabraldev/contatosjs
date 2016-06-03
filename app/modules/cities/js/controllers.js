@@ -1,6 +1,8 @@
 /*globals angular */
 
-(function() {
+(function () {
+    "use strict";
+    
 	angular
 	.module("contatosJS.cities")
 	.controller("CitiesCtrl", citiesCtrl);
@@ -55,12 +57,12 @@
 		};
 
 		$scope.save = function(city) {
-			console.info("salvando cidade...");
+			console.info("Salvando cidade...");
 			var myCity = {
 				id: null,
 				name: city.name,
 				capital: city.capital,
-				state: city.state
+				state: city.state._links.self
 			};
 			Cities.save(myCity).then(
 				function(response) {
@@ -80,7 +82,7 @@
 				id: city.id,
 				name: city.name,
 				capital: city.capital,
-				state: city.state
+				state: city.state._links.self
 			};
 			Cities.update(myCity).then(
 				function(response) {
