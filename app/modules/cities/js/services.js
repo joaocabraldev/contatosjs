@@ -28,7 +28,7 @@
 		}
 
 		function update(city) {
-			return $http.put(config.baseUrl + "/cities", city);
+			return $http.post(config.baseUrl + "/cities", city);
 		}
 
 		function deleteById(id) {

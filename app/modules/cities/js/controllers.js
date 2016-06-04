@@ -62,7 +62,7 @@
 				id: null,
 				name: city.name,
 				capital: city.capital,
-				state: city.state._links.self
+				state: city.state._links.self.href
 			};
 			Cities.save(myCity).then(
 				function(response) {
@@ -82,7 +82,7 @@
 				id: city.id,
 				name: city.name,
 				capital: city.capital,
-				state: city.state._links.self
+				state: city.state._links.self.href
 			};
 			Cities.update(myCity).then(
 				function(response) {
