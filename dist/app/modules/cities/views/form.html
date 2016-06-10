@@ -10,7 +10,7 @@
     <br /><br />
 
     <select class="w3-select" ng-model="city.state"
-      ng-options="state as state.name + ' - ' + state.initials for state in states">
+      ng-options="state as state.name + ' - ' + state.initials for state in states track by state.id">
       <option value="" disabled selected>Selecione um estado...</option>
     </select>
     
