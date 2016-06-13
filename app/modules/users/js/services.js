@@ -16,23 +16,23 @@
 		return service;
 		
 		function getAll() {
-			return $http.get(config.baseUrl + "/users");
+			return $http.get(config.baseUrl + "/systemUsers");
 		}
 		
 		function getById(id) {
-			return $http.get(config.baseUrl + "/users/" + id);
+			return $http.get(config.baseUrl + "/systemUsers/" + id);
 		}
 		
 		function save(user) {
-			return $http.post(config.baseUrl + "/users", user);
+			return $http.post(config.baseUrl + "/systemUsers", user);
 		}
 		
 		function update(user) {
-			return $http.post(config.baseUrl + "/users", user);
+			return $http.post(config.baseUrl + "/systemUsers", user);
 		}
 		
 		function deleteById(id) {
-			return $http.delete(config.baseUrl + "/users/" + id);
+			return $http.delete(config.baseUrl + "/systemUsers/" + id);
 		}
 	}
 })();
