@@ -1,0 +1,31 @@
+<div class="w3-container">
+
+	<h2 class="w3-theme">Detalhes de {{ city.name }}</h2>
+
+	<table class="w3-table">
+		<tbody>
+			<tr>
+				<td class="w50">ID:</td>
+				<td>{{ city.id }}</td>
+			</tr>
+			<tr>
+				<td class="w50">Nome:</td>
+				<td>{{ city.name }}</td>
+			</tr>
+			<tr>
+				<td class="w50">Estado:</td>
+				<td>{{ city.state.name }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p>
+		<a class="w3-btn w3-orange w3-large" href="/#cities/edit/{{ city.id }}">
+			<i class="fa fa-pencil"></i> Editar
+		</a>
+		<a class="w3-btn w3-large w3-red" href="/#cities">
+           <i class="fa fa-times"></i> Voltar
+        </a>
+	</p>
+
+</div>

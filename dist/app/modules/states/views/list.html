@@ -1,0 +1,39 @@
+<div class="w3-container">
+	
+	<h2 class="w3-theme">Lista de Estados</h2>
+	
+	<img id="loading" src="../img/loading.gif" ng-show="loading" />
+	<table id="tbl_states" class="w3-table" ng-hide="loading">
+		<thead>
+			<tr class="w3-theme">
+				<th>Id</th>
+				<th>Nome</th>
+				<th>Sigla</th>
+				<th>#</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="state in states">
+				<td>{{ state.id }}</td>
+				<td>{{ state.name }}</td>
+				<td>{{ state.initials }}</td>
+				<td>
+					<a class="w3-btn w3-blue w3-large" href="/#states/{{ state.id }}">
+						<i class="fa fa-search"></i>
+					</a>
+					<a class="w3-btn w3-orange w3-large" href="/#states/edit/{{ state.id }}">
+						<i class="fa fa-pencil"></i>
+					</a>
+					<a class="w3-btn w3-red w3-large" ng-click="delete(state.id)">
+						<i class="fa fa-trash-o"></i>
+					</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p ng-hide="loading">
+		<a class="w3-btn w3-theme w3-large" href="/#states/new">
+			<i class="fa fa-file-o"></i> Novo
+		</a>
+	</p>
+</div>
