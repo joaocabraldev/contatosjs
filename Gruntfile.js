@@ -46,11 +46,6 @@ module.exports = function( grunt ) {
             },
             js: {
                 src: [
-                    //'dist/app/lib/jquery/jquery-2.2.3.js'
-                    //, 'dist/app/lib/angular/angular.js'
-                    //, 'dist/app/lib/angular/angular-route.js'
-                    //, 'dist/app/lib/angular/angular-cookies.js'
-                    //'dist/app/lib/auth0/*.js'
                     'dist/app/js/*.js'
                     , 'dist/app/modules/login/*.js'
                     , 'dist/app/modules/login/js/*.js'
