@@ -15,7 +15,7 @@
 			Users.getAll()
 			.then(
 				function(response) {
-					$scope.users = response.data._embedded.users;
+					$scope.users = response.data._embedded.systemUsers;
 				},
 				function(errResponse) {
 					console.error("Erro ao buscar usuários.");
