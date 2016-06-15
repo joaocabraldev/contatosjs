@@ -95,23 +95,33 @@
         return service;
         
         function login(username, password, callback) {
-            var response;
+            var myResponse;
             
-            if (username === "admin" && password === "1234") {
-                response = { success: true };
+            Users.getByLogin(username)
+            .then(function (response) {
+            	systemUser = response.data;
+            });
+            
+            console.log("Usuário " + systemUser.name);
+            
+            if (typeof systemUser == "undefined") {
+            	response = { success: false, message: "Usuário inexistente!" };
+            } else if (password == systemUser.password) {
+            	response = { success: true, user: systemuser };
             } else {
                 response = { success: false, message: "Usuário ou senha incorretos!" };
             }
-            
+
             callback(response);
         }
         
-        function setCredentials(username, password) {
+        function setCredentials(username, password, name) {
             var authdata = base64.encode(username + ":" + password);
      
             $rootScope.globals = {
                 currentUser: {
                     username: username,
+                    name: name,
                     authdata: authdata
                 },
                 loggedIn: true

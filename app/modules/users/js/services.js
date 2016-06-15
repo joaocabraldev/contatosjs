@@ -10,6 +10,7 @@
 		var service = {};
 		service.getAll = getAll;
 		service.getById = getById;
+		service.getByLogin = getByLogin;
 		service.save = save;
 		service.update = update;
 		service.deleteById = deleteById;
@@ -21,6 +22,13 @@
 		
 		function getById(id) {
 			return $http.get(config.baseUrl + "/systemUsers/" + id);
+		}
+		
+		function getByLogin(login) {
+			return $http
+				.get(config.baseUrl 
+					+ "/systemUsers/search/findOneByLogin?login=" + login
+					+ "&projection=fullUser");
 		}
 		
 		function save(user) {

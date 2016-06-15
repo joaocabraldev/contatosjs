@@ -10,7 +10,8 @@
         $scope.login = function() {
             LoginService.login($scope.username, $scope.password, function(response) {
                 if (response.success) {
-                    LoginService.setCredentials($scope.username, $scope.password);
+                    LoginService.setCredentials(response.user.login
+                    	, response.user.password, response.user.name);
                     $location.path("/");
                 } else {
                     console.error(response.message);
