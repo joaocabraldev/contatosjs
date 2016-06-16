@@ -96,23 +96,23 @@
         
         function login(username, password, callback) {
             var myResponse;
+            var systemUser;
             
             Users.getByLogin(username)
             .then(function (response) {
             	systemUser = response.data;
+            	
+            	if (typeof systemUser == "undefined") {
+		        	myResponse = { success: false, message: "Usuário inexistente!" };
+		        } else if (password == systemUser.password) {
+		        	myResponse = { success: true, user: systemUser };
+		        } else {
+		            myResponse = { success: false, message: "Usuário ou senha incorretos!" };
+		        }
+		        
+		    	callback(myResponse);    	
             });
-            
-            console.log("Usuário " + systemUser.name);
-            
-            if (typeof systemUser == "undefined") {
-            	response = { success: false, message: "Usuário inexistente!" };
-            } else if (password == systemUser.password) {
-            	response = { success: true, user: systemuser };
-            } else {
-                response = { success: false, message: "Usuário ou senha incorretos!" };
-            }
 
-            callback(response);
         }
         
         function setCredentials(username, password, name) {
