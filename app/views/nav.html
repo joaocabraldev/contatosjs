@@ -14,7 +14,30 @@
 	<li ng-class="{'w3-theme-d4': isActive('/about')}" >
 		<a href="/#about">Sobre</a>
 	</li>
-	<li class="w3-right">
-		<a href="#/logout">Usuário: {{ globals.currentUser.name }}</a>
+	<li class="w3-right w3-dropdown-hover">
+		<a href="#/">
+			Usuário: {{ globals.currentUser.name }} 
+			<i class="fa fa-caret-down"></i>
+		</a>
+		<div class="w3-dropdown-content w3-white w3-card-4">
+			<a href="#/logout">
+		  		Logout <i class="fa fa-sign-out"></i>
+			</a>
+		</div>
 	</li>
 </ul>
+
+<div ng-repeat="message in errorMessages" class="w3-container w3-red">
+  <h3>{{ message.title }}</h3>
+  <p>{{ message.text }}</p>
+</div>
+
+<div ng-repeat="message in infoMessages" class="w3-container w3-blue">
+  <h3>{{ message.title }}</h3>
+  <p>{{ message.text }}</p>
+</div> 
+
+<div ng-repeat="message in successMessages" class="w3-container w3-green">
+  <h3>{{ message.title }}</h3>
+  <p>{{ message.text }}</p>
+</div> 

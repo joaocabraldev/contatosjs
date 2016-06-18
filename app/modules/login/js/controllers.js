@@ -14,6 +14,7 @@
                     	, response.user.password, response.user.name);
                     $location.path("/");
                 } else {
+                	$rootScope.errorMessages.push({"title": "Erro no login", "text": "Login e senha incorretos."})
                     console.error(response.message);
                 }
             });

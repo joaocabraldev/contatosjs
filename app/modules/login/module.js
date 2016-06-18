@@ -29,6 +29,10 @@
 	
 	run.$inject = ["$rootScope", "$location", "$cookieStore", "$http"];
 	function run($rootScope, $location, $cookieStore, $http) {
+		$rootScope.infoMessages = [];
+		$rootScope.errorMessages = [];
+		$rootScope.sucessMessages = [];
+		
 		$rootScope.globals = $cookieStore.get("globals") || {};
 		
 		if ($rootScope.globals.currentUser) {

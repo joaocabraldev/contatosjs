@@ -26,7 +26,7 @@
 	}
 	
 	navCtrl.$inject = ["$scope", "$location"];
-	function navCtrl($scope, $location) {
+	function navCtrl($scope, $location) {		
 		$scope.isActive = function(destination) {
 			return destination === $location.path();
 		};
