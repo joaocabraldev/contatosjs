@@ -9,9 +9,11 @@
 	function statesCtrl($scope, $location, $routeParams, States) {
 		$scope.state = [];
 		$scope.states = [];
+
 		$scope.loading = true;
 		
 		var getAll = function() {
+			
 			States.getAll()
 			.then(
 				function(response) {

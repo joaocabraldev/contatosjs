@@ -1,11 +1,24 @@
-<form class="w3-container">
+<form>
     
-    <label class="w3-label">Nome</label>
-    <input class="w3-input" type="text" ng-model="user.name" />
+    <div class="form-group">
+    	<label for="txtNome">Nome</label>
+    	<input id="txtNome" class="form-control" type="text" 
+    		placeholder="Nome"
+    		ng-model="user.name" />
+    </div>
     
-    <label class="w3-label">Login</label>
-    <input class="w3-input" type="text" ng-model="user.login" />
+    <div class="form-group">
+    	<label for="txtLogin">Login</label>
+    	<input id="txtLogin" class="form-control" type="text" 
+    		placeholder="Login"
+    		ng-model="user.login" />
+    </div>
+    
+    <div class="form-group">
+    	<label for="txtPassword">Password</label>
+    	<input id="txtPassword" class="form-control" type="password" 
+    		placeholder="Password"
+    		ng-model="user.password" />
+    </div>
 
-    <label class="w3-label">Senha</label>
-    <input class="w3-input" type="password" ng-model="user.password" />
 </form>

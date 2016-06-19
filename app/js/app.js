@@ -5,7 +5,8 @@
 	
 	angular
 	.module("contatosJS", [
-		"ngRoute"
+		"angular-loading-bar"
+		, "ngRoute"
 		, "ngCookies"
 		, "contatosJS.controllers"
 		, "contatosJS.services"
@@ -19,8 +20,10 @@
 	.module("contatosJS")
 	.config(config);
 	
-	config.$inject = ["$routeProvider"];
-	function config($routeProvider) {
+	config.$inject = ["$routeProvider", "cfpLoadingBarProvider"];
+	function config($routeProvider, cfpLoadingBarProvider) {
+		cfpLoadingBarProvider.parentSelector = "#loadingBar";
+	
 		$routeProvider
 	
 		.when("/", {

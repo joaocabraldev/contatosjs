@@ -1,9 +1,17 @@
-<form class="w3-container">
+<form>
     
-    <label class="w3-label">Nome</label>
-    <input class="w3-input" type="text" ng-model="state.name" />
+    <div class="form-group">
+    	<label for="txtNome">Nome</label>
+    	<input id="txtNome" class="form-control" type="text" 
+    		placeholder="Nome"
+    		ng-model="state.name" />
+    </div>
     
-    <label class="w3-label">Sigla</label>
-    <input class="w3-input" type="text" ng-model="state.initials" />
+    <div class="form-group">
+    	<label for="txtSigla">Sigla</label>
+    	<input id="txtSigla" class="form-control" type="text" 
+    		placeholder="Sigla"
+    		ng-model="state.initials" />
+    </div>
 
 </form>

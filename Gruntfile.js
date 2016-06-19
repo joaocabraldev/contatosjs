@@ -1,17 +1,18 @@
 module.exports = function( grunt ) {
  
     grunt.initConfig({
-        clean :  {
+        clean:  {
             main: ['dist/**'],
             dist: [
                 'dist/app/css/style.css'
                 , 'dist/app/css/all.css'
                 , 'dist/app/js/all.js'
+                , 'dist/app/js/directives.js'
+                , 'dist/app/js/filters.js'
                 , 'dist/app/js/app.js'
                 , 'dist/app/js/controllers.js'
                 , 'dist/app/js/services.js'
                 , 'dist/app/js/services.js'
-                //, 'dist/app/lib/**'
                 , 'dist/app/modules/cities/css/**'
                 , 'dist/app/modules/cities/js/**'
                 , 'dist/app/modules/cities/*.js'
@@ -26,6 +27,7 @@ module.exports = function( grunt ) {
                 , 'dist/app/modules/users/*.js'
             ]
        },
+       
        copy: {
           main: {
             files: [
@@ -33,14 +35,16 @@ module.exports = function( grunt ) {
             ]
           },
         },
-        concat: {
+       
+       concat: {
             options: {
               separator: '\n\n',
             },
             css: {
                 src: [
-                    'dist/app/css/*.css'
-                    , 'dist/app/lib/w3css/*.css'
+                    'dist/app/lib/boostrap/dist/css/bootstrap.css'
+                    , 'dist/app/lib/boostrap/dist/css/bootstrap-theme.css'
+                    , 'dist/app/css/*.css'
                 ],
                 dest: 'dist/app/css/all.css'
             },
@@ -59,23 +63,26 @@ module.exports = function( grunt ) {
                 dest: 'dist/app/js/all.js'
             }
         },
+        
         cssmin: {
             target: {
                 files: { 'dist/app/css/all.min.css': ['dist/app/css/all.css'] }    
             }
         },
+        
         uglify : {
             target: {
                 files: { 'dist/app/js/all.min.js': ['dist/app/js/all.js'] }
             }
         },
+        
         processhtml: {
-            dist: {
+        	dist: {
               files: {
                 'dist/app/index.html': ['dist/app/index.html']
               }
             }
-          }
+      	}
     });
   
     // Plugins do Grunt
@@ -91,4 +98,5 @@ module.exports = function( grunt ) {
         , 'cssmin', 'uglify', 'processhtml'
         , 'clean:dist'
     ]);
+    
 };

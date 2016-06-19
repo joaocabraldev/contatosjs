@@ -1,31 +1,38 @@
-<div class="w3-container">
+<h2>Detalhes de {{ state.name }}</h2>
 
-	<h2 class="w3-theme">Detalhes de {{ state.name }}</h2>
+<div class="row">
 
-	<table class="w3-table">
-		<tbody>
-			<tr>
-				<td class="w50">ID:</td>
-				<td>{{ state.id }}</td>
-			</tr>
-			<tr>
-				<td class="w50">Nome:</td>
-				<td>{{ state.name }}</td>
-			</tr>
-			<tr>
-				<td class="w50">Sigla:</td>
-				<td>{{ state.initials }}</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="col-xs-1">
+	    ID:
+	</div>
+	<div class="col-xs-1">
+	    {{ state.id }}
+	</div>
 
-	<p>
-		<a class="w3-btn w3-orange w3-large" href="/#states/edit/{{ state.id }}">
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    Nome:
+	</div>
+	<div class="col-xs-5">
+	    {{ state.name }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    <a class="btn btn-warning" href="/#states/edit/{{ state.id }}">
 			<i class="fa fa-pencil"></i> Editar
 		</a>
-		<a class="w3-btn w3-large w3-red" href="/#states">
-           <i class="fa fa-times"></i> Voltar
-        </a>
-	</p>
+	</div>
+	<div class="col-xs-5">
+	    <a class="btn btn-danger" href="/#states">
+		   <i class="fa fa-times"></i> Voltar
+		</a>
+	</div>
 
 </div>

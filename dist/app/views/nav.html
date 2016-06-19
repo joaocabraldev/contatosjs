@@ -1,20 +1,61 @@
-<ul class="w3-navbar w3-theme" ng-if="globals.loggedIn">
-	<li ng-class="{'w3-theme-d4': isActive('/')}">
-		<a href="/#/">Home</a>
-	</li>
-	<li ng-class="{'w3-theme-d4': isActive('/states')}" >
-		<a href="/#states">Estados</a>
-	</li>
-	<li ng-class="{'w3-theme-d4': isActive('/states')}" >
-		<a href="/#cities">Cidades</a>
-	</li>
-	<li ng-class="{'w3-theme-d4': isActive('/states')}" >
-		<a href="/#users">Usuários</a>
-	</li>
-	<li ng-class="{'w3-theme-d4': isActive('/about')}" >
-		<a href="/#about">Sobre</a>
-	</li>
-	<li class="w3-right">
-		<a href="#/logout">Usuário: {{ globals.currentUser.name }}</a>
-	</li>
-</ul>
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-if="globals.loggedIn">
+	<div class="container">
+	
+		<div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" 
+          	data-toggle="collapse" data-target="#navbar" 
+          	aria-expanded="false" aria-controls="navbar">
+          	
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            
+          </button>
+          <a class="navbar-brand" href="#/">ContatosJS</a>
+        </div> <!-- navbar-header -->
+        
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+            <li ng-class="{'active': isActive('/')}">
+				<a href="/#/">Home</a>
+			</li>
+			<li ng-class="{'active': isActive('/states')}" >
+				<a href="/#states">Estados</a>
+			</li>
+			<li ng-class="{'active': isActive('/cities')}" >
+				<a href="/#cities">Cidades</a>
+			</li>
+			<li ng-class="{'active': isActive('/users')}" >
+				<a href="/#users">Usuários</a>
+			</li>
+			<li ng-class="{'active': isActive('/about')}" >
+				<a href="/#about">Sobre</a>
+			</li>
+          </ul> <!-- nav navbar-nav -->
+          
+          <ul class="nav navbar-nav navbar-right">
+          	<li class="dropdown">
+                <a href="/#" class="dropdown-toggle" 
+                	data-toggle="dropdown" role="button" aria-haspopup="true" 
+                	aria-expanded="false">
+                	
+                	Seja bem vindo {{ globals.currentUser.name }} 
+                	<i class="fa fa-caret-down"></i>
+                	
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                  	<a href="#/logout">
+                  		Logout <i class="fa fa-sign-out"></i>
+                  	</a>
+                  </li>
+
+                </ul>
+              </li>
+          </ul> <!-- navbar right -->
+        </div><!-- navbar -->
+        
+	</div> <!-- container -->
+</nav>

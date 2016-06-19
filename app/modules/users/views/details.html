@@ -1,31 +1,49 @@
-<div class="w3-container">
-	
-	<h2 class="w3-theme">Detalhes de {{ user.name }}</h2>
-	
-	<table class="w3-table">
-		<tbody>
-			<tr>
-				<td>ID:</td>
-				<td>{{ user.id }}</td>
-			</tr>
-			<tr>
-				<td>Nome:</td>
-				<td>{{ user.name }}</td>
-			</tr>
-			<tr>
-				<td>Login:</td>
-				<td>{{ user.login }}</td>
-			</tr>
-		</tbody>
-	</table>
-	
-	<p>
-		<a class="w3-btn w3-orange w3-large" href="/#users/edit/{{ user.id }}">
+<h2>Detalhes de {{ user.name }}</h2>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    ID:
+	</div>
+	<div class="col-xs-1">
+	    {{ user.id }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    Nome:
+	</div>
+	<div class="col-xs-5">
+	    {{ user.name }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    Login:
+	</div>
+	<div class="col-xs-5">
+	    {{ user.login }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    <a class="btn btn-warning" href="/#users/edit/{{ user.id }}">
 			<i class="fa fa-pencil"></i> Editar
 		</a>
-		<a class="w3-btn w3-large w3-red" href="/#users">
-           <i class="fa fa-times"></i> Voltar
-        </a> 	
-	</p>
-	
+	</div>
+	<div class="col-xs-5">
+	    <a class="btn btn-danger" href="/#users">
+		   <i class="fa fa-times"></i> Voltar
+		</a>
+	</div>
+
 </div>
