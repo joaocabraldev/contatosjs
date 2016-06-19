@@ -21,7 +21,7 @@
 	<body>
 		<div ng-include="'views/nav.html'"></div>
 		<br />
-		<div class="container">
+		<div class="container" ng-hide="loading">
 			<ng-view></ng-view>
 		</div><!-- container -->
 		
