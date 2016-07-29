@@ -9,6 +9,7 @@
 		, "ngRoute"
 		, "ngCookies"
 		, "contatosJS.controllers"
+		, "contatosJS.directives"
 		, "contatosJS.services"
 		, "contatosJS.login"
 		, "contatosJS.users"

@@ -1,14 +1,21 @@
 /* global angular */
 
-'use strict';
-
-angular.module('contatosJS.directives', ['contatosJS.services']);
-
-angular.module('contatosJS.directives').
-  directive('appVersion', ['version', function(version) {
-    
-    return function(scope, elm, attrs) {
-      elm.text(version);
+(function() {
+  
+  'use strict';
+  
+  angular.module('contatosJS.directives', []);
+  
+  angular.module('contatosJS.directives')
+  .directive('alerts', alertsDirective);
+  
+  function alertsDirective() {
+    return {
+      restrict: 'AE'
+      , templateUrl: '../views/alertsDirective.html'
+      , replace: true
+      , controller: 'navCtrl'
     };
-    
-}]);
+  }
+  
+})();

@@ -30,6 +30,8 @@
 		$scope.isActive = function(destination) {
 			return destination === $location.path();
 		};
+		
+		$scope.successMessages = ["Mensagem 1", "Mensagem 2"];
 	}
 	
 })();
