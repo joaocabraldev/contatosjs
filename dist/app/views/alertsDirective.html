@@ -1,6 +1,12 @@
-<div class="alert alert-success fade-in" 
-    ng-repeat="msg in successMessages">
-    
-    {{ msg }}
-    
+<div ng-controller="NavCtrl">
+
+  <div class="alert {{ msg.type }} fade-in"
+    ng-repeat="msg in messages">
+
+      <span class="close" data-dismiss="alert"
+        aria-label="close" ng-click="close($index)">&times;</span>
+      {{ msg.text }}
+
+  </div>
+
 </div>

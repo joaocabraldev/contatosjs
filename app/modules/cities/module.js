@@ -1,5 +1,8 @@
 /* global angular, $  */
 
+/**
+ * Módulo de Cidades.
+ */
 (function() {
 	"use strict";
 
@@ -11,6 +14,10 @@
 	.config(config);
 
 	config.$inject = ["$routeProvider"];
+	/**
+	 * Configuração de rotas do múdulo de Cidades.
+	 * @param $routeProvider Provedor de rotas.
+	 */
 	function config($routeProvider) {
 		$routeProvider
 

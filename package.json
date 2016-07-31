@@ -20,8 +20,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "node server_test.js",
-    "grunt": "grunt"
+    "test": "node server_test.js"
   },
   "main": "server.js",
   "repository": {
