@@ -1,0 +1,13 @@
+<h2>Editando o Estado {{ state.name }}</h2>
+
+<div ng-include="'modules/states/views/form.html'"></div>
+
+<p>
+    <a class="btn btn-success" ng-click="update(state)">
+        <i class="fa fa-floppy-o"></i> Salvar
+    </a>
+    <a class="btn btn-danger" href="/#states">
+       <i class="fa fa-times"></i> Cancelar
+    </a>    
+</p>
+<br />

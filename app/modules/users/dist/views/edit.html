@@ -1,0 +1,13 @@
+<h2>Editando o Usuário {{ user.name }}</h2>
+
+<div ng-include="'modules/users/views/form.html'"></div>
+
+<p>
+    <a class="btn btn-success" ng-click="update(user)">
+        <i class="fa fa-floppy-o"></i> Salvar
+    </a>
+    <a class="btn btn-danger" href="/#users">
+       <i class="fa fa-times"></i> Cancelar
+    </a>    
+</p>
+<br />

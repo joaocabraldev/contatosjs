@@ -1,0 +1,38 @@
+<h2>Detalhes de {{ state.name }}</h2>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    ID:
+	</div>
+	<div class="col-xs-1">
+	    {{ state.id }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    Nome:
+	</div>
+	<div class="col-xs-5">
+	    {{ state.name }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    <a class="btn btn-warning" href="/#states/edit/{{ state.id }}">
+			<i class="fa fa-pencil"></i> Editar
+		</a>
+	</div>
+	<div class="col-xs-5">
+	    <a class="btn btn-danger" href="/#states">
+		   <i class="fa fa-times"></i> Voltar
+		</a>
+	</div>
+
+</div>

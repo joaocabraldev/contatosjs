@@ -1,0 +1,49 @@
+<h2>Detalhes de {{ user.name }}</h2>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    ID:
+	</div>
+	<div class="col-xs-1">
+	    {{ user.id }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    Nome:
+	</div>
+	<div class="col-xs-5">
+	    {{ user.name }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    Login:
+	</div>
+	<div class="col-xs-5">
+	    {{ user.login }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    <a class="btn btn-warning" href="/#users/edit/{{ user.id }}">
+			<i class="fa fa-pencil"></i> Editar
+		</a>
+	</div>
+	<div class="col-xs-5">
+	    <a class="btn btn-danger" href="/#users">
+		   <i class="fa fa-times"></i> Voltar
+		</a>
+	</div>
+
+</div>

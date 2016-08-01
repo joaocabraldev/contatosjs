@@ -7,6 +7,7 @@
   },
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-sub": "^0.1.6",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
@@ -20,7 +21,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "node server_test.js"
+    "test-run": "node server_test.js"
   },
   "main": "server.js",
   "repository": {

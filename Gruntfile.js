@@ -1,39 +1,115 @@
 module.exports = function( grunt ) {
  
     grunt.initConfig({
+        
+        sub: {
+            states: {
+                gruntfile: 'app/modules/states/Gruntfile.js',
+                task: 'default'
+            },
+            cities: {
+                gruntfile: 'app/modules/cities/Gruntfile.js',
+                task: 'default'
+            },
+            login: {
+                gruntfile: 'app/modules/login/Gruntfile.js',
+                task: 'default'
+            },
+            users: {
+                gruntfile: 'app/modules/users/Gruntfile.js',
+                task: 'default'
+            }
+        },
+        
         clean:  {
             main: ['dist/**'],
             dist: [
-                'dist/app/css/style.css'
-                , 'dist/app/css/all.css'
-                , 'dist/app/js/all.js'
-                , 'dist/app/js/directives.js'
-                , 'dist/app/js/filters.js'
-                , 'dist/app/js/app.js'
-                , 'dist/app/js/controllers.js'
-                , 'dist/app/js/services.js'
-                , 'dist/app/js/services.js'
-                , 'dist/app/modules/cities/css/**'
-                , 'dist/app/modules/cities/js/**'
-                , 'dist/app/modules/cities/*.js'
-                , 'dist/app/modules/login/css/**'
-                , 'dist/app/modules/login/js/**'
-                , 'dist/app/modules/login/*.js'
-                , 'dist/app/modules/states/css/**'
-                , 'dist/app/modules/states/js/**'
-                , 'dist/app/modules/states/*.js'
-                , 'dist/app/modules/users/css/**'
-                , 'dist/app/modules/users/js/**'
-                , 'dist/app/modules/users/*.js'
+                'dist/css/style.css'
+                , 'dist/css/all.css'
+                , 'dist/js/all.js'
+                , 'dist/js/directives.js'
+                , 'dist/js/filters.js'
+                , 'dist/js/app.js'
+                , 'dist/js/controllers.js'
+                , 'dist/js/services.js'
+                , 'dist/js/services.js'
+                , 'dist/modules/cities/*.js'
+                , 'dist/modules/login/*.js'
+                , 'dist/modules/states/*.js'
+                , 'dist/modules/users/*.js'
             ]
        },
        
        copy: {
           main: {
+              
             files: [
-              {expand: true, src: ['app/**'], dest: 'dist/'}
-            ]
-          },
+                {
+                    expand: true,
+                    cwd: 'app/',
+                    src: ['index.html', 'favicon.ico'],
+                    dest: 'dist/',
+                    flattern: true
+                },
+                {
+                    expand: true,
+                    cwd: 'app/views',
+                    src: '**',
+                    dest: 'dist/views',
+                    flattern: true
+                },
+                {
+                    expand: true, 
+                    cwd: 'app/css/',
+                    src: '**',
+                    dest: 'dist/css',
+                    flattern: true
+                },
+                {
+                    expand: true, 
+                    cwd: 'app/js/', 
+                    src: '**',
+                    dest: 'dist/js',
+                    flattern: true
+                },
+                {
+                    expand: true,
+                    cwd: 'app/lib/',
+                    src: ['**/**/*.min.css', '**/**/*.min.js'],
+                    dest: 'dist/lib',
+                    flattern: true
+                },
+                {
+                    expand: true,
+                    cwd: 'app/modules/states/dist/', 
+                    src: '**',
+                    dest: 'dist/modules/states',
+                    flattern: true
+                },
+                {
+                    expand: true,
+                    cwd: 'app/modules/cities/dist/', 
+                    src: '**',
+                    dest: 'dist/modules/cities',
+                    flattern: true
+                },
+                {
+                    expand: true,
+                    cwd: 'app/modules/login/dist/', 
+                    src: '**',
+                    dest: 'dist/modules/login',
+                    flattern: true
+                },
+                {
+                    expand: true,
+                    cwd: 'app/modules/users/dist/', 
+                    src: '**',
+                    dest: 'dist/modules/users',
+                    flattern: true
+                }
+            ]// files
+            
+          } // copy
         },
        
        concat: {
@@ -42,50 +118,47 @@ module.exports = function( grunt ) {
             },
             css: {
                 src: [
-                    'dist/app/lib/boostrap/dist/css/bootstrap.css'
-                    , 'dist/app/lib/boostrap/dist/css/bootstrap-theme.css'
-                    , 'dist/app/css/*.css'
+                    'dist/lib/boostrap/dist/css/bootstrap.css'
+                    , 'dist/lib/boostrap/dist/css/bootstrap-theme.css'
+                    , 'dist/css/*.css'
                 ],
-                dest: 'dist/app/css/all.css'
+                dest: 'dist/css/all.css'
             },
             js: {
                 src: [
-                    'dist/app/js/*.js'
-                    , 'dist/app/modules/login/*.js'
-                    , 'dist/app/modules/login/js/*.js'
-                    , 'dist/app/modules/users/*.js'
-                    , 'dist/app/modules/users/js/*.js'
-                    , 'dist/app/modules/states/*.js'
-                    , 'dist/app/modules/states/js/*.js'
-                    , 'dist/app/modules/cities/*.js'
-                    , 'dist/app/modules/cities/js/*.js'
+                    'dist/js/*.js'
+                    , 'dist/modules/login/module.min.js'
+                    , 'dist/modules/users/module.min.js'
+                    , 'dist/modules/states/module.min.js'
+                    , 'dist/modules/cities/module.min.js'
                 ],
-                dest: 'dist/app/js/all.js'
+                dest: 'dist/js/all.js'
             }
         },
         
         cssmin: {
             target: {
-                files: { 'dist/app/css/all.min.css': ['dist/app/css/all.css'] }    
+                files: { 'dist/css/all.min.css': ['dist/css/all.css'] }    
             }
         },
         
         uglify : {
             target: {
-                files: { 'dist/app/js/all.min.js': ['dist/app/js/all.js'] }
+                files: { 'dist/js/all.min.js': ['dist/js/all.js'] }
             }
         },
         
         processhtml: {
         	dist: {
               files: {
-                'dist/app/index.html': ['dist/app/index.html']
+                'dist/index.html': ['dist/index.html']
               }
             }
       	}
     });
   
     // Plugins do Grunt
+    grunt.loadNpmTasks('grunt-sub');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -99,4 +172,9 @@ module.exports = function( grunt ) {
         , 'clean:dist'
     ]);
     
+    grunt.registerTask('buildAll', [
+        'sub', 'clean:main', 'copy', 'concat'
+        , 'cssmin', 'uglify', 'processhtml'
+        , 'clean:dist'
+    ]);
 };
