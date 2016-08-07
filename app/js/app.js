@@ -19,6 +19,7 @@
 		, "contatosJS.users"
 		, "contatosJS.states"
 		, "contatosJS.cities"
+		, "contatosJS.contacts"
 	]);
 
 	angular

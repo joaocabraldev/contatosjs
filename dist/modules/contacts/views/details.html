@@ -1,0 +1,49 @@
+<h2>Detalhes de {{ city.name }}</h2>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    ID:
+	</div>
+	<div class="col-xs-1">
+	    {{ city.id }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    Nome:
+	</div>
+	<div class="col-xs-5">
+	    {{ city.name }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    Estado:
+	</div>
+	<div class="col-xs-5">
+	    {{ city.state.name }}
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="col-xs-1">
+	    <a class="btn btn-warning" href="/#cities/edit/{{ city.id }}">
+			<i class="fa fa-pencil"></i> Editar
+		</a>
+	</div>
+	<div class="col-xs-5">
+	    <a class="btn btn-danger" href="/#cities">
+		   <i class="fa fa-times"></i> Voltar
+		</a>
+	</div>
+
+</div>

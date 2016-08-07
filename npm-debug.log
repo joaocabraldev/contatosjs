@@ -1,0 +1,267 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@2.15.8
+3 info using node@v4.4.7
+4 verbose readDependencies loading dependencies from /home/joao/Projetos/contatosjs/package.json
+5 verbose install where, deps [ '/home/joao/Projetos/contatosjs',
+5 verbose install   [ 'express',
+5 verbose install     'grunt',
+5 verbose install     'grunt-sub',
+5 verbose install     'grunt-contrib-clean',
+5 verbose install     'grunt-contrib-concat',
+5 verbose install     'grunt-contrib-copy',
+5 verbose install     'grunt-contrib-cssmin',
+5 verbose install     'grunt-contrib-uglify',
+5 verbose install     'grunt-processhtml',
+5 verbose install     'grunt-usemin' ] ]
+6 verbose install where, peers [ '/home/joao/Projetos/contatosjs', [] ]
+7 verbose installManyTop reading for lifecycle /home/joao/Projetos/contatosjs/package.json
+8 info preinstall contatosjs@0.0.1
+9 verbose installManyTop reading scoped package data from /home/joao/Projetos/contatosjs/node_modules/express/package.json
+10 verbose installManyTop reading scoped package data from /home/joao/Projetos/contatosjs/node_modules/grunt/package.json
+11 verbose installManyTop reading scoped package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-clean/package.json
+12 verbose installManyTop reading scoped package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-concat/package.json
+13 verbose installManyTop reading scoped package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-copy/package.json
+14 verbose installManyTop reading scoped package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-cssmin/package.json
+15 verbose installManyTop reading scoped package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-uglify/package.json
+16 verbose installManyTop reading scoped package data from /home/joao/Projetos/contatosjs/node_modules/grunt-processhtml/package.json
+17 verbose installManyTop reading scoped package data from /home/joao/Projetos/contatosjs/node_modules/grunt-usemin/package.json
+18 info package.json express@3.4.0 No license field.
+19 info package.json grunt-processhtml@0.3.13 No license field.
+20 verbose readDependencies loading dependencies from /home/joao/Projetos/contatosjs/package.json
+21 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/express/package.json
+22 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt/package.json
+23 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-clean/package.json
+24 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-concat/package.json
+25 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-copy/package.json
+26 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-cssmin/package.json
+27 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-uglify/package.json
+28 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-processhtml/package.json
+29 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-usemin/package.json
+30 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/.bin/express/package.json
+31 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/.bin/grunt/package.json
+32 verbose already installed skipping grunt@^1.0.1 /home/joao/Projetos/contatosjs
+33 silly cache add args [ 'grunt-sub@^0.1.6', null ]
+34 verbose cache add spec grunt-sub@^0.1.6
+35 silly cache add parsed spec Result {
+35 silly cache add   raw: 'grunt-sub@^0.1.6',
+35 silly cache add   scope: null,
+35 silly cache add   name: 'grunt-sub',
+35 silly cache add   rawSpec: '^0.1.6',
+35 silly cache add   spec: '>=0.1.6 <0.2.0',
+35 silly cache add   type: 'range' }
+36 silly addNamed grunt-sub@>=0.1.6 <0.2.0
+37 verbose addNamed ">=0.1.6 <0.2.0" is a valid semver range for grunt-sub
+38 silly addNameRange { name: 'grunt-sub', range: '>=0.1.6 <0.2.0', hasData: false }
+39 silly mapToRegistry name grunt-sub
+40 silly mapToRegistry using default registry
+41 silly mapToRegistry registry https://registry.npmjs.org/
+42 silly mapToRegistry data Result {
+42 silly mapToRegistry   raw: 'grunt-sub',
+42 silly mapToRegistry   scope: null,
+42 silly mapToRegistry   name: 'grunt-sub',
+42 silly mapToRegistry   rawSpec: '',
+42 silly mapToRegistry   spec: 'latest',
+42 silly mapToRegistry   type: 'tag' }
+43 silly mapToRegistry uri https://registry.npmjs.org/grunt-sub
+44 verbose addNameRange registry:https://registry.npmjs.org/grunt-sub not in flight; fetching
+45 verbose already installed skipping grunt-contrib-clean@^1.0.0 /home/joao/Projetos/contatosjs
+46 verbose already installed skipping grunt-contrib-concat@^1.0.1 /home/joao/Projetos/contatosjs
+47 verbose already installed skipping grunt-contrib-copy@^1.0.0 /home/joao/Projetos/contatosjs
+48 verbose already installed skipping grunt-contrib-cssmin@^1.0.1 /home/joao/Projetos/contatosjs
+49 verbose already installed skipping grunt-contrib-uglify@^1.0.1 /home/joao/Projetos/contatosjs
+50 verbose already installed skipping grunt-processhtml@^0.3.13 /home/joao/Projetos/contatosjs
+51 verbose already installed skipping grunt-usemin@^3.1.1 /home/joao/Projetos/contatosjs
+52 verbose already installed skipping express@3.4.0 /home/joao/Projetos/contatosjs
+53 verbose request uri https://registry.npmjs.org/grunt-sub
+54 verbose request no auth needed
+55 info attempt registry request try #1 at 20:35:50
+56 verbose request id 9663d7547c2e68e1
+57 verbose etag "71P453J1WDU06O70401NP9IW0"
+58 http request GET https://registry.npmjs.org/grunt-sub
+59 http 304 https://registry.npmjs.org/grunt-sub
+60 verbose headers { date: 'Sun, 07 Aug 2016 23:35:50 GMT',
+60 verbose headers   via: '1.1 varnish',
+60 verbose headers   'cache-control': 'max-age=300',
+60 verbose headers   etag: '"71P453J1WDU06O70401NP9IW0"',
+60 verbose headers   age: '47',
+60 verbose headers   connection: 'keep-alive',
+60 verbose headers   'x-served-by': 'cache-gru7120-GRU',
+60 verbose headers   'x-cache': 'HIT',
+60 verbose headers   'x-cache-hits': '1',
+60 verbose headers   'x-timer': 'S1470612950.918864,VS0,VE0',
+60 verbose headers   vary: 'Accept-Encoding' }
+61 silly get cb [ 304,
+61 silly get   { date: 'Sun, 07 Aug 2016 23:35:50 GMT',
+61 silly get     via: '1.1 varnish',
+61 silly get     'cache-control': 'max-age=300',
+61 silly get     etag: '"71P453J1WDU06O70401NP9IW0"',
+61 silly get     age: '47',
+61 silly get     connection: 'keep-alive',
+61 silly get     'x-served-by': 'cache-gru7120-GRU',
+61 silly get     'x-cache': 'HIT',
+61 silly get     'x-cache-hits': '1',
+61 silly get     'x-timer': 'S1470612950.918864,VS0,VE0',
+61 silly get     vary: 'Accept-Encoding' } ]
+62 verbose etag https://registry.npmjs.org/grunt-sub from cache
+63 verbose get saving grunt-sub to /home/joao/.npm/registry.npmjs.org/grunt-sub/.cache.json
+64 verbose correctMkdir /home/joao/.npm correctMkdir not in flight; initializing
+65 silly addNameRange number 2 { name: 'grunt-sub', range: '>=0.1.6 <0.2.0', hasData: true }
+66 silly addNameRange versions [ 'grunt-sub',
+66 silly addNameRange   [ '0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.1.6' ] ]
+67 silly addNamed grunt-sub@0.1.6
+68 verbose addNamed "0.1.6" is a plain semver version for grunt-sub
+69 silly cache afterAdd grunt-sub@0.1.6
+70 verbose afterAdd /home/joao/.npm/grunt-sub/0.1.6/package/package.json not in flight; writing
+71 verbose correctMkdir /home/joao/.npm correctMkdir not in flight; initializing
+72 verbose afterAdd /home/joao/.npm/grunt-sub/0.1.6/package/package.json written
+73 silly install resolved [ { name: 'grunt-sub',
+73 silly install resolved     description: 'Run subtask on another file',
+73 silly install resolved     version: '0.1.6',
+73 silly install resolved     homepage: 'https://github.com/ramoneeza/grunt-sub.git',
+73 silly install resolved     author: { name: 'Ramon Ordiales', email: 'ramon@eeza.csic.es' },
+73 silly install resolved     repository:
+73 silly install resolved      { type: 'git',
+73 silly install resolved        url: 'git+https://github.com/ramoneeza/grunt-sub.git' },
+73 silly install resolved     bugs: { url: 'https://github.com/Ramon/grunt-sub/issues' },
+73 silly install resolved     licenses: [ [Object] ],
+73 silly install resolved     engines: { node: '>= 0.8.0' },
+73 silly install resolved     scripts: { test: 'grunt test' },
+73 silly install resolved     devDependencies:
+73 silly install resolved      { 'grunt-contrib-jshint': '^0.9.2',
+73 silly install resolved        'grunt-contrib-clean': '^0.5.0',
+73 silly install resolved        'grunt-contrib-nodeunit': '^0.3.3',
+73 silly install resolved        grunt: '~0.4.5' },
+73 silly install resolved     peerDependencies: { grunt: '~0.4.5' },
+73 silly install resolved     keywords: [ 'gruntplugin' ],
+73 silly install resolved     gitHead: 'f69c7d221fde6ea2df67a7ae635a396ceabec362',
+73 silly install resolved     _id: 'grunt-sub@0.1.6',
+73 silly install resolved     _shasum: '07509f79af3a09b99452083a667e46a5bd48a336',
+73 silly install resolved     _from: 'grunt-sub@>=0.1.6 <0.2.0',
+73 silly install resolved     _npmVersion: '2.13.1',
+73 silly install resolved     _nodeVersion: '0.12.7',
+73 silly install resolved     _npmUser: { name: 'ramoneeza', email: 'ramon@eeza.csic.es' },
+73 silly install resolved     dist:
+73 silly install resolved      { shasum: '07509f79af3a09b99452083a667e46a5bd48a336',
+73 silly install resolved        tarball: 'https://registry.npmjs.org/grunt-sub/-/grunt-sub-0.1.6.tgz' },
+73 silly install resolved     maintainers: [ [Object] ],
+73 silly install resolved     directories: {},
+73 silly install resolved     _resolved: 'https://registry.npmjs.org/grunt-sub/-/grunt-sub-0.1.6.tgz',
+73 silly install resolved     readme: 'ERROR: No README data found!' } ]
+74 info install grunt-sub@0.1.6 into /home/joao/Projetos/contatosjs
+75 info installOne grunt-sub@0.1.6
+76 verbose installOne of grunt-sub to /home/joao/Projetos/contatosjs not in flight; installing
+77 verbose correctMkdir /home/joao/.npm/_locks correctMkdir not in flight; initializing
+78 verbose lock using /home/joao/.npm/_locks/grunt-sub-0afd85484e44e629.lock for /home/joao/Projetos/contatosjs/node_modules/grunt-sub
+79 silly install write writing grunt-sub 0.1.6 to /home/joao/Projetos/contatosjs/node_modules/grunt-sub
+80 verbose unbuild node_modules/grunt-sub
+81 silly gentlyRm /home/joao/Projetos/contatosjs/node_modules/grunt-sub is being purged from base /home/joao/Projetos/contatosjs
+82 verbose gentlyRm don't care about contents; nuking /home/joao/Projetos/contatosjs/node_modules/grunt-sub
+83 verbose tar unpack /home/joao/.npm/grunt-sub/0.1.6/package.tgz
+84 verbose tar unpacking to /home/joao/Projetos/contatosjs/node_modules/grunt-sub
+85 silly gentlyRm /home/joao/Projetos/contatosjs/node_modules/grunt-sub is being purged
+86 verbose gentlyRm don't care about contents; nuking /home/joao/Projetos/contatosjs/node_modules/grunt-sub
+87 silly gunzTarPerm modes [ '775', '664' ]
+88 silly gunzTarPerm extractEntry package.json
+89 silly gunzTarPerm modified mode [ 'package.json', 438, 436 ]
+90 silly gunzTarPerm extractEntry .npmignore
+91 silly gunzTarPerm modified mode [ '.npmignore', 438, 436 ]
+92 silly gunzTarPerm extractEntry README.md
+93 silly gunzTarPerm modified mode [ 'README.md', 438, 436 ]
+94 silly gunzTarPerm extractEntry Gruntfile.js
+95 silly gunzTarPerm modified mode [ 'Gruntfile.js', 438, 436 ]
+96 silly gunzTarPerm extractEntry .jshintrc
+97 silly gunzTarPerm modified mode [ '.jshintrc', 438, 436 ]
+98 silly gunzTarPerm extractEntry LICENSE-MIT
+99 silly gunzTarPerm modified mode [ 'LICENSE-MIT', 438, 436 ]
+100 silly gunzTarPerm extractEntry tasks/sub.js
+101 silly gunzTarPerm modified mode [ 'tasks/sub.js', 438, 436 ]
+102 silly gunzTarPerm extractEntry test/sub_test.js
+103 silly gunzTarPerm modified mode [ 'test/sub_test.js', 438, 436 ]
+104 silly gunzTarPerm extractEntry test/expected/custom_options
+105 silly gunzTarPerm modified mode [ 'test/expected/custom_options', 438, 436 ]
+106 silly gunzTarPerm extractEntry test/expected/default_options
+107 silly gunzTarPerm modified mode [ 'test/expected/default_options', 438, 436 ]
+108 silly gunzTarPerm extractEntry test/fixtures/123
+109 silly gunzTarPerm modified mode [ 'test/fixtures/123', 438, 436 ]
+110 silly gunzTarPerm extractEntry test/fixtures/testing
+111 silly gunzTarPerm modified mode [ 'test/fixtures/testing', 438, 436 ]
+112 verbose write writing to /home/joao/Projetos/contatosjs/node_modules/grunt-sub/package.json
+113 info preinstall grunt-sub@0.1.6
+114 verbose readDependencies loading dependencies from /home/joao/Projetos/contatosjs/node_modules/grunt-sub/package.json
+115 silly prepareForInstallMany adding grunt@~0.4.5 from grunt-sub peerDependencies
+116 warn peerDependencies The peer dependency grunt@~0.4.5 included from grunt-sub will no
+117 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+118 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+119 verbose readDependencies loading dependencies from /home/joao/Projetos/contatosjs/node_modules/grunt-sub/package.json
+120 silly install resolved []
+121 verbose about to build /home/joao/Projetos/contatosjs/node_modules/grunt-sub
+122 info build /home/joao/Projetos/contatosjs/node_modules/grunt-sub
+123 info linkStuff grunt-sub@0.1.6
+124 silly linkStuff grunt-sub@0.1.6 has /home/joao/Projetos/contatosjs/node_modules as its parent node_modules
+125 verbose linkBins grunt-sub@0.1.6
+126 verbose linkMans grunt-sub@0.1.6
+127 verbose rebuildBundles grunt-sub@0.1.6
+128 info install grunt-sub@0.1.6
+129 info postinstall grunt-sub@0.1.6
+130 verbose readDependencies loading dependencies from /home/joao/Projetos/contatosjs/package.json
+131 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/express/package.json
+132 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt/package.json
+133 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-clean/package.json
+134 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-concat/package.json
+135 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-copy/package.json
+136 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-cssmin/package.json
+137 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-contrib-uglify/package.json
+138 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-processhtml/package.json
+139 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-sub/package.json
+140 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/grunt-usemin/package.json
+141 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/.bin/express/package.json
+142 verbose targetResolver reading package data from /home/joao/Projetos/contatosjs/node_modules/.bin/grunt/package.json
+143 verbose already installed skipping grunt@~0.4.5 /home/joao/Projetos/contatosjs
+144 silly install resolved []
+145 verbose unlock done using /home/joao/.npm/_locks/grunt-sub-0afd85484e44e629.lock for /home/joao/Projetos/contatosjs/node_modules/grunt-sub
+146 info build /home/joao/Projetos/contatosjs
+147 info linkStuff contatosjs@0.0.1
+148 silly linkStuff contatosjs@0.0.1 has /home/joao/Projetos as its parent node_modules
+149 verbose linkBins contatosjs@0.0.1
+150 verbose linkMans contatosjs@0.0.1
+151 verbose rebuildBundles contatosjs@0.0.1
+152 verbose rebuildBundles [ '.bin',
+152 verbose rebuildBundles   'express',
+152 verbose rebuildBundles   'grunt',
+152 verbose rebuildBundles   'grunt-contrib-clean',
+152 verbose rebuildBundles   'grunt-contrib-concat',
+152 verbose rebuildBundles   'grunt-contrib-copy',
+152 verbose rebuildBundles   'grunt-contrib-cssmin',
+152 verbose rebuildBundles   'grunt-contrib-uglify',
+152 verbose rebuildBundles   'grunt-processhtml',
+152 verbose rebuildBundles   'grunt-sub',
+152 verbose rebuildBundles   'grunt-usemin' ]
+153 info install contatosjs@0.0.1
+154 info postinstall contatosjs@0.0.1
+155 info prepublish contatosjs@0.0.1
+156 verbose validateInstall loading /home/joao/Projetos/contatosjs/package.json for validation
+157 verbose stack Error: The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+157 verbose stack     at /usr/lib/node_modules/npm/lib/install.js:125:32
+157 verbose stack     at /usr/lib/node_modules/npm/lib/install.js:268:7
+157 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+157 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+157 verbose stack     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+157 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+157 verbose stack     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+157 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+157 verbose stack     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+157 verbose stack     at /usr/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+158 verbose cwd /home/joao/Projetos/contatosjs
+159 error Linux 4.4.0-31-generic
+160 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install"
+161 error node v4.4.7
+162 error npm  v2.15.8
+163 error code EPEERINVALID
+164 error peerinvalid The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+164 error peerinvalid Peer grunt-sub@0.1.6 wants grunt@~0.4.5
+164 error peerinvalid Peer grunt-processhtml@0.3.13 wants grunt@>=0.4.x
+164 error peerinvalid Peer grunt-contrib-concat@1.0.1 wants grunt@>=0.4.0
+164 error peerinvalid Peer grunt-usemin@3.1.1 wants grunt@>=0.4.0
+164 error peerinvalid Peer grunt-contrib-clean@1.0.0 wants grunt@>= 0.4.5
+165 verbose exit [ 1, true ]

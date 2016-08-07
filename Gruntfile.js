@@ -1,7 +1,7 @@
 module.exports = function( grunt ) {
- 
+
     grunt.initConfig({
-        
+
         sub: {
             states: {
                 gruntfile: 'app/modules/states/Gruntfile.js',
@@ -18,9 +18,13 @@ module.exports = function( grunt ) {
             users: {
                 gruntfile: 'app/modules/users/Gruntfile.js',
                 task: 'default'
+            },
+            users: {
+                gruntfile: 'app/modules/contacts/Gruntfile.js',
+                task: 'default'
             }
         },
-        
+
         clean:  {
             main: ['dist/**'],
             dist: [
@@ -37,12 +41,13 @@ module.exports = function( grunt ) {
                 , 'dist/modules/login/*.js'
                 , 'dist/modules/states/*.js'
                 , 'dist/modules/users/*.js'
+                , 'dist/modules/contacts/*.js'
             ]
        },
-       
+
        copy: {
           main: {
-              
+
             files: [
                 {
                     expand: true,
@@ -59,15 +64,15 @@ module.exports = function( grunt ) {
                     flattern: true
                 },
                 {
-                    expand: true, 
+                    expand: true,
                     cwd: 'app/css/',
                     src: '**',
                     dest: 'dist/css',
                     flattern: true
                 },
                 {
-                    expand: true, 
-                    cwd: 'app/js/', 
+                    expand: true,
+                    cwd: 'app/js/',
                     src: '**',
                     dest: 'dist/js',
                     flattern: true
@@ -81,37 +86,44 @@ module.exports = function( grunt ) {
                 },
                 {
                     expand: true,
-                    cwd: 'app/modules/states/dist/', 
+                    cwd: 'app/modules/states/dist/',
                     src: '**',
                     dest: 'dist/modules/states',
                     flattern: true
                 },
                 {
                     expand: true,
-                    cwd: 'app/modules/cities/dist/', 
+                    cwd: 'app/modules/cities/dist/',
                     src: '**',
                     dest: 'dist/modules/cities',
                     flattern: true
                 },
                 {
                     expand: true,
-                    cwd: 'app/modules/login/dist/', 
+                    cwd: 'app/modules/login/dist/',
                     src: '**',
                     dest: 'dist/modules/login',
                     flattern: true
                 },
                 {
                     expand: true,
-                    cwd: 'app/modules/users/dist/', 
+                    cwd: 'app/modules/users/dist/',
                     src: '**',
                     dest: 'dist/modules/users',
                     flattern: true
+                },
+                {
+                    expand: true,
+                    cwd: 'app/modules/contacts/dist/',
+                    src: '**',
+                    dest: 'dist/modules/contacts',
+                    flattern: true
                 }
             ]// files
-            
+
           } // copy
         },
-       
+
        concat: {
             options: {
               separator: '\n\n',
@@ -131,23 +143,24 @@ module.exports = function( grunt ) {
                     , 'dist/modules/users/module.min.js'
                     , 'dist/modules/states/module.min.js'
                     , 'dist/modules/cities/module.min.js'
+                    , 'dist/modules/contacts/module.min.js'
                 ],
                 dest: 'dist/js/all.js'
             }
         },
-        
+
         cssmin: {
             target: {
-                files: { 'dist/css/all.min.css': ['dist/css/all.css'] }    
+                files: { 'dist/css/all.min.css': ['dist/css/all.css'] }
             }
         },
-        
+
         uglify : {
             target: {
                 files: { 'dist/js/all.min.js': ['dist/js/all.js'] }
             }
         },
-        
+
         processhtml: {
         	dist: {
               files: {
@@ -156,7 +169,7 @@ module.exports = function( grunt ) {
             }
       	}
     });
-  
+
     // Plugins do Grunt
     grunt.loadNpmTasks('grunt-sub');
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -171,7 +184,7 @@ module.exports = function( grunt ) {
         , 'cssmin', 'uglify', 'processhtml'
         , 'clean:dist'
     ]);
-    
+
     grunt.registerTask('buildAll', [
         'sub', 'clean:main', 'copy', 'concat'
         , 'cssmin', 'uglify', 'processhtml'

@@ -1,0 +1,17 @@
+{
+  "name": "contatosjs.conctacts",
+  "description": "Módulo de Contatos da Aplicação de Contatos",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "author": "João Antônio Cabral",
+  "license": "MIT"
+}

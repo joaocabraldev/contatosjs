@@ -39,7 +39,7 @@
 		.when("/cities/edit/:id", {
 			templateUrl: "modules/cities/views/edit.html",
 			controller: "CitiesCtrl"
-		});;
+		});
 
 	}
 

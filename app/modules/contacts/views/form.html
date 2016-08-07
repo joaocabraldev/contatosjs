@@ -1,0 +1,24 @@
+<form>
+    
+    <div class="form-group">
+    	<label for="txtNome">Nome</label>
+    	<input id="txtNome" class="form-control" type="text" 
+    		placeholder="Nome"
+    		ng-model="city.name" />
+    </div>
+    
+    <div class="checkbox">
+		<label>
+			<input type="checkbox" ng-model="city.capital"
+		      ng-checked="city.capital" /> Capital
+		</label>
+    </div>
+    
+    <div class="form-group">
+		<select class="form-control" ng-model="city.state"
+	      ng-options="state as state.name + ' - ' + state.initials for state in states track by state.id">
+			<option value="" disabled selected>Selecione um estado...</option>
+	    </select>
+    </div>
+
+</form>
