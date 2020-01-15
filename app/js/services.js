@@ -14,10 +14,11 @@
 	.value("config", {
 
 		/**
-		 * URL Base da aplicação real.
+		 * URL Base da aplicação de api.
 		 * Local: baseUrl: "http://localhost:8080/rest"
+		 * Online: baseUrl: "https://contatosweb.herokuapp.com/rest"
 		 */
-		baseUrl: "https://contatosweb.herokuapp.com/rest"
+		baseUrl: "http://localhost:8080/rest"
 
 	});
 

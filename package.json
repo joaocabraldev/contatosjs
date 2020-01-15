@@ -26,12 +26,12 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shura16/contatosjs.git"
+    "url": "git+https://github.com/joaocabraldev/contatosjs.git"
   },
   "author": "João Antônio Cabral",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Shura16/contatosjs/issues"
+    "url": "https://github.com/joaocabraldev/contatosjs/issues"
   },
-  "homepage": "https://github.com/Shura16/contatosjs#readme"
+  "homepage": "https://github.com/joaocabraldev/contatosjs#readme"
 }
